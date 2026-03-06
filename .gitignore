@@ -1,0 +1,27 @@
+﻿*.Rhistory
+__pycache__/
+.tmp.drivedownload/
+.tmp.driveupload/
+.ipynb_checkpoints/
+.Rhistory
+*.pyc
+.idea/
+.vscode/
+*.asv
+
+# Data available upon request
+data/*.csv
+data/*.txt
+
+# Large simulation results
+results/simulations/fitted_objects/
+
+# Tex files
+*.tex
+*.bib
+
+# Misc (HPC)
+logs/*
+
+# Local spot checks
+experiments/simulation/check_simulation_n50_N100.py
