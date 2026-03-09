@@ -29,7 +29,7 @@ If you have any questions, please feel free to reach out to: junyoup@umich.edu
 
 If R is installed in a non-standard location, set `R_HOME` before running code that imports `functions.regression`.
 
-Minimal install reminder:
+Minimal installation guide:
 
 ```powershell
 pip install "numpy>=1.26" "pandas>=2.2" "scipy>=1.14" "matplotlib>=3.9" "seaborn>=0.13" "joblib>=1.4" "numba>=0.63" "rpy2>=3.5" "pot>=0.9"
@@ -37,19 +37,20 @@ pip install "numpy>=1.26" "pandas>=2.2" "scipy>=1.14" "matplotlib>=3.9" "seaborn
 
 ```r
 install.packages("latentcor")
-install.packages("fastfrechet")
+install.packages("devtools")
+devtools::install_github("https://github.com/alexandercoulter/fastfrechet", build_vignettes = TRUE)
 ```
 
 Reference links:
 
 - `rpy2`: [documentation](https://rpy2.github.io/doc/latest/html/overview.html), [PyPI package](https://pypi.org/project/rpy2/)
 - `latentcor`: [package page](https://cran.r-project.org/package=latentcor)
-- `fastfrechet`: [upstream repository](https://github.com/alexandercoulter/fastfrechet)
+- `fastfrechet`: [repository](https://github.com/alexandercoulter/fastfrechet)
 
 ## Minimal reproducibility guide
 
 CGM (AI-READI) experiments:
-Data is available upon request to the study. See [data/Processing_guide.md](./data/Processing_guide.md) for details.
+Data is available from the study website upon request. See [data/Processing_guide.md](./data/Processing_guide.md) for details.
 1. Put the downloaded AI-READI data in `../dataset/`.
 2. Run `python data/processing_ai_readi.py`.
 3. Run `data/ai_readi_window_processing.ipynb`.

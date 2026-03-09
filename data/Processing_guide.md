@@ -1,10 +1,10 @@
 # AI-READI Processing Guide
 
-Use this guide to generate the AI-READI CGM dataset files used by our paper.
+A guide to generate the AI-READI CGM dataset files used by our paper.
 
 ## External Input
 
-The data is available upon request to the AI-READI study:
+The data is available from the AI-READI study upon request:
 - dataset documentation: [docs.aireadi.org](https://docs.aireadi.org/)
 - project website: [aireadi.org](https://aireadi.org/)
 - historical v2.0.0 documentation: [AI-READI docs v2.0.0](https://docs.aireadi.org/docs/2/about)
@@ -17,7 +17,7 @@ After downloading CGM measurements and clinical variables, place them in the sib
 ../dataset/
 ```
 
-Expected files:
+Expected files downloaded from the study (in the directory `../dataset/`):
 
 - `participants.tsv`
 - `clinical_data/measurement.csv`
@@ -36,7 +36,7 @@ Expected files:
    - `data/ai_readi.csv`
    - `data/ai_readi_metadata.csv`
    - `data/ai_readi_metadata_cleaned.csv`
-   - `data/interpolation_summary.csv`
+   - `data/interpolation_summary.csv` (complementary reference indicating how many points are interpolated within the CGM trajectory)
 
 2. Build the window-feature CSV file for CGM trivariate distributional representation.
 
@@ -50,6 +50,6 @@ Expected files:
 
 ## Notes
 
-- `processing_ai_readi.py` reads the external export and writes repository-local CSV files.
-- `window_processing.py` contains reusable preprocessing helpers.
-- `ai_readi_window_processing.ipynb` is the canonical path for generating `data/aireadi_window120.csv`.
+- `processing_ai_readi.py` reads the external export of AI-READI data and writes processed CSV files into the `data/` directory.
+- `window_processing.py` contains preprocessing helpers for multivariate distributional representation of wearable measurements.
+- `ai_readi_window_processing.ipynb` generates `data/aireadi_window120.csv`.

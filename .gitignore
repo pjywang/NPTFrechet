@@ -25,3 +25,6 @@ logs/*
 
 # Local spot checks
 experiments/simulation/check_simulation_n50_N100.py
+
+# Local docs
+functions/DEPENDENCY_MAP.md
