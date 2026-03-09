@@ -54,14 +54,14 @@ Data is available from the study website upon request. See [data/Processing_guid
 1. Put the downloaded AI-READI data in `../dataset/`.
 2. Run `python data/processing_ai_readi.py`.
 3. Run `data/ai_readi_window_processing.ipynb`.
-4. Run `experiments/real/ai_readi_regresseion.ipynb`.
-5. Run `experiments/real/ai_readi_permutation.ipynb` or `python experiments/real/ai_permutation.py` (recommended to use HPC clusters for parallel programming)
+4. Run `experiments/real/ai_readi_regresseion.ipynb` (regression with HbA1c as predictor)
+5. Run `experiments/real/ai_readi_permutation.ipynb` or `python experiments/real/ai_permutation.py` (permutation test; recommended to use HPC clusters for parallel programming)
 
 Simulations (recommended to use HPC clusters for parallel programming):
 
-1. Run `python experiments/simulation/Simulation.py`.
-2. Run `python experiments/simulation/simul_wasserstein_eval.py` (supplementary; use HPC clusters)
-3. Run `experiments/simulation/Simulation_plots.ipynb`.
+1. Run `python experiments/simulation/Simulation.py` (main simulation)
+2. Run `python experiments/simulation/simul_wasserstein_eval.py` (supplementary; very slow due to the Wasserstein distance computation)
+3. Run `experiments/simulation/Simulation_plots.ipynb` (results figure generation)
 
 ## Main Outputs
 - real-data figures:
